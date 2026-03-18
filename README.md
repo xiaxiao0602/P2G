@@ -13,16 +13,7 @@ P2G is a **fully automated, end-to-end framework** that integrates multi-task po
 
 ---
 
-## 🚀 Key Features
-
-- **End-to-End Automation**: From CT to 3D-printable STL, no manual intervention required.
-- **Multi-Task Point Cloud Learning**: Simultaneously predicts entry points (via heatmap regression) and contact regions (via segmentation) using architectures like PointNet++, PointNeXt, and Point Transformer V3.
-- **Geometric Trajectory Optimization**: Maximizes minimum distance to cortical bone to ensure safe screw placement.
-- **Parametric Guide Generation**: Automatically constructs watertight, manufacturable guide models with integrated drill sleeves and cross-linking bridges.
-
----
-
-## 📊 Dataset
+## Dataset
 
 We use the publicly available [CTSpine1k](https://github.com/MIRACLE-Center/CTSpine1K) dataset. After automatic segmentation with TotalSegmentator and manual quality control, **5,526 vertebrae** (T7–L5) were retained. Each vertebra is represented as a point cloud with two annotations:
 
@@ -33,34 +24,27 @@ The raw point clouds are available in this repository under `data/`.
 
 ---
 
-## 🧠 Method Overview
-
-![Method Overview](docs/figures/figure3.png)  
-<img width="733" height="312" alt="image" src="https://github.com/user-attachments/assets/b4db49f3-1c6b-4441-8cd5-b1f0bb5081a4" />
-
-*Figure 3: Multi-task point cloud network architecture.*
+## Method Overview
 
 The pipeline consists of four main stages:
 
-1. **Vertebral Reconstruction**: CT → segmentation (TotalSegmentator) → mesh → point cloud.
+1. **Vertebral Reconstruction**: CT → segmentation [TotalSegmentator](https://github.com/wasserth/TotalSegmentator) → mesh → point cloud.
 2. **Feature Extraction**: A multi-task point cloud network predicts entry point heatmaps and contact region masks.
 3. **Trajectory Optimization**: Candidate screw directions are sampled within a cone; the direction maximizing the minimum distance to cortical bone is selected.
 4. **Parametric Guide Generation**: Based on the predicted features and optimal trajectory, a 3D guide is automatically modeled (base, bridge, drill sleeves) and exported as STL.
 
-For details, please refer to our paper (see [Citation](#citation)).
+<img width="733" height="312" alt="image" src="https://github.com/user-attachments/assets/b4db49f3-1c6b-4441-8cd5-b1f0bb5081a4" />
+
+*Figure 2: Multi-task point cloud network architecture.*
+
+For details, please refer to our paper.
 
 ---
 
-## ⚙️ Installation & Usage
+## Web Application Demo
 
-### Requirements
-- Python 3.8+
-- PyTorch 1.10+
-- CUDA (optional, for GPU acceleration)
-- Other dependencies: see `requirements.txt`
+We have integrated the P2G framework into a **user-friendly online platform**. The platform provides an intuitive interface for uploading CT data, visualizing intermediate results, and downloading the final STL guide.
 
-### Installation
-```bash
-git clone https://github.com/yyu-lab/P2G.git
-cd P2G
-pip install -r requirements.txt
+
+
+
