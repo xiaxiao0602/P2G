@@ -7,7 +7,7 @@ P2G (Point to Guide) is an end-to-end framework that integrates point-cloud deep
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![GitHub Repo stars](https://img.shields.io/github/stars/yyu-lab/P2G?style=social)](https://github.com/yyu-lab/P2G)
+[![GitHub Repo stars](https://img.shields.io/github/stars/yyu-lab/P2G?style=social)](https://github.com/xiaxiao0602/P2G)
 
 P2G is a **fully automated, end-to-end framework** that integrates multi-task point cloud deep learning with geometric optimization to design patient-specific pedicle screw guides from preoperative CT scans. The framework automatically predicts screw entry points, segments posterior contact regions, computes the safest screw trajectory by maximizing cortical clearance, and generates a 3D-printable STL guide—all in about **3 minutes** per case.
 
@@ -25,7 +25,7 @@ P2G is a **fully automated, end-to-end framework** that integrates multi-task po
 
 ## 📊 Dataset
 
-We use the publicly available [CTSpine1k](https://github.com/ICTMCG/CTSpine1k) dataset. After automatic segmentation with TotalSegmentator and manual quality control, **5,526 vertebrae** (T7–L5) were retained. Each vertebra is represented as a point cloud (8,192 points) with two annotations:
+We use the publicly available [CTSpine1k](https://github.com/MIRACLE-Center/CTSpine1K) dataset. After automatic segmentation with TotalSegmentator and manual quality control, **5,526 vertebrae** (T7–L5) were retained. Each vertebra is represented as a point cloud (8,192 points) with two annotations:
 
 - **Entry Point**: A keypoint at the junction of transverse process and superior articular process.
 - **Contact Region**: A binary mask on the posterior arch (lamina, spinous process base, articular processes) ensuring stable guide placement.
