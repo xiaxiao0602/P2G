@@ -28,7 +28,7 @@ The raw point clouds are available in this repository under `data/`.
 
 The pipeline consists of four main stages:
 
-1. **Vertebral Reconstruction**: CT → segmentation [TotalSegmentator](https://github.com/wasserth/TotalSegmentator) → mesh → point cloud.
+1. **Vertebral Reconstruction**: CT → segmentation ([TotalSegmentator](https://github.com/wasserth/TotalSegmentator)) → mesh → point cloud.
 2. **Feature Extraction**: A multi-task point cloud network predicts entry point heatmaps and contact region masks.
 3. **Trajectory Optimization**: Candidate screw directions are sampled within a cone; the direction maximizing the minimum distance to cortical bone is selected.
 4. **Parametric Guide Generation**: Based on the predicted features and optimal trajectory, a 3D guide is automatically modeled (base, bridge, drill sleeves) and exported as STL.
