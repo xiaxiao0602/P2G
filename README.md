@@ -7,7 +7,7 @@ P2G (Point to Guide) is an end-to-end framework that integrates point-cloud deep
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![GitHub Repo stars](https://img.shields.io/github/stars/yyu-lab/P2G?style=social)](https://github.com/xiaxiao0602/P2G)
+[![GitHub Repo stars](https://img.shields.io/github/stars/xiaxiao0602/P2G?style=social)](https://github.com/xiaxiao0602/P2G)
 
 P2G is a **fully automated, end-to-end framework** that integrates multi-task point cloud deep learning with geometric optimization to design patient-specific pedicle screw guides from preoperative CT scans. The framework automatically predicts screw entry points, segments posterior contact regions, computes the safest screw trajectory by maximizing cortical clearance, and generates a 3D-printable STL guide—all in about **3 minutes** per case.
 
