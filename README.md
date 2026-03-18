@@ -45,6 +45,8 @@ For details, please refer to our paper.
 
 We have integrated the P2G framework into a **user-friendly online platform**. The platform provides an intuitive interface for uploading CT data, visualizing intermediate results, and downloading the final STL guide.
 
+![demo](https://github.com/user-attachments/assets/f98e7684-6271-4566-8c96-050e8e1893eb)
+
 https://github.com/user-attachments/assets/ebf8325d-fcb6-407f-ab19-cae957ef3189
 
 
