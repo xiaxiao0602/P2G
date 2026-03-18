@@ -15,7 +15,7 @@ P2G is a **fully automated, end-to-end framework** that integrates multi-task po
 
 ## Dataset
 
-We use the publicly available [CTSpine1k](https://github.com/MIRACLE-Center/CTSpine1K) dataset. After automatic segmentation with TotalSegmentator and manual quality control, **5,526 vertebrae** (T7–L5) were retained. Each vertebra is represented as a point cloud with two annotations:
+We use the publicly available [CTSpine1k](https://github.com/MIRACLE-Center/CTSpine1K) dataset. After automatic segmentation with TotalSegmentator and manual quality control, each vertebra is represented as a point cloud with two annotations:
 
 - **Entry Point**: A keypoint at the junction of transverse process and superior articular process.
 - **Contact Region**: A binary mask on the posterior arch (lamina, spinous process base, articular processes) ensuring stable guide placement.
