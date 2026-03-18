@@ -15,7 +15,7 @@ P2G is a **fully automated, end-to-end framework** that integrates multi-task po
 
 ## Dataset
 
-We use the publicly available [CTSpine1k](https://github.com/MIRACLE-Center/CTSpine1K) dataset. After automatic segmentation with TotalSegmentator and manual quality control, each vertebra is represented as a point cloud with two annotations:
+We use the publicly available [CTSpine1k](https://github.com/MIRACLE-Center/CTSpine1K) dataset. After manual quality control, each vertebra is represented as a point cloud with two annotations:
 
 - **Entry Point**: A keypoint at the junction of transverse process and superior articular process.
 - **Contact Region**: A binary mask on the posterior arch (lamina, spinous process base, articular processes) ensuring stable guide placement.
@@ -28,7 +28,7 @@ The raw point clouds are available in this repository under `data/`.
 
 The pipeline consists of four main stages:
 
-1. **Vertebral Reconstruction**: CT → segmentation ([TotalSegmentator](https://github.com/wasserth/TotalSegmentator)) → mesh → point cloud.
+1. **Vertebral Reconstruction**: CT → segmentation ([TotalSegmentator](https://github.com/wasserth/TotalSegmentator)) → point cloud.
 2. **Feature Extraction**: A multi-task point cloud network predicts entry point heatmaps and contact region masks.
 3. **Trajectory Optimization**: Candidate screw directions are sampled within a cone; the direction maximizing the minimum distance to cortical bone is selected.
 4. **Parametric Guide Generation**: Based on the predicted features and optimal trajectory, a 3D guide is automatically modeled (base, bridge, drill sleeves) and exported as STL.
