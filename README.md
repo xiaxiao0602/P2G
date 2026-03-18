@@ -19,24 +19,25 @@ P2G is a **fully automated, end-to-end framework** that integrates multi-task po
 - **Multi-Task Point Cloud Learning**: Simultaneously predicts entry points (via heatmap regression) and contact regions (via segmentation) using architectures like PointNet++, PointNeXt, and Point Transformer V3.
 - **Geometric Trajectory Optimization**: Maximizes minimum distance to cortical bone to ensure safe screw placement.
 - **Parametric Guide Generation**: Automatically constructs watertight, manufacturable guide models with integrated drill sleeves and cross-linking bridges.
-- **Clinically Validated**: Evaluated on 5,526 vertebrae (T7–L5) from the CTSpine1k dataset and validated ex vivo on 3D-printed models, achieving mean entry-point errors <2.3 mm and angular deviations <2.2°.
 
 ---
 
 ## 📊 Dataset
 
-We use the publicly available [CTSpine1k](https://github.com/MIRACLE-Center/CTSpine1K) dataset. After automatic segmentation with TotalSegmentator and manual quality control, **5,526 vertebrae** (T7–L5) were retained. Each vertebra is represented as a point cloud (8,192 points) with two annotations:
+We use the publicly available [CTSpine1k](https://github.com/MIRACLE-Center/CTSpine1K) dataset. After automatic segmentation with TotalSegmentator and manual quality control, **5,526 vertebrae** (T7–L5) were retained. Each vertebra is represented as a point cloud with two annotations:
 
 - **Entry Point**: A keypoint at the junction of transverse process and superior articular process.
 - **Contact Region**: A binary mask on the posterior arch (lamina, spinous process base, articular processes) ensuring stable guide placement.
 
-The raw and annotated point clouds are available in this repository under `data/`.
+The raw point clouds are available in this repository under `data/`.
 
 ---
 
 ## 🧠 Method Overview
 
 ![Method Overview](docs/figures/figure3.png)  
+<img width="733" height="312" alt="image" src="https://github.com/user-attachments/assets/b4db49f3-1c6b-4441-8cd5-b1f0bb5081a4" />
+
 *Figure 3: Multi-task point cloud network architecture.*
 
 The pipeline consists of four main stages:
