@@ -1,7 +1,6 @@
 # P2G
 P2G (Point to Guide) is an end-to-end framework that integrates point-cloud deep learning with geometric optimization to automatically design 3D-printable patient-specific pedicle screw guides from CT scans.
-
-![P2G Overview](docs/figures/figure1.png)  
+<img width="1614" height="1374" alt="Overview" src="https://github.com/user-attachments/assets/d9afc879-b3d8-4eb8-b6a7-ab7942d83758" />
 *Figure 1: End-to-end pipeline of P2G: from CT to 3D-printable patient-specific pedicle screw guides.*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
