@@ -1,7 +1,7 @@
 # P2G
 P2G (Point to Guide) is an end-to-end framework that integrates point-cloud deep learning with geometric optimization to automatically design 3D-printable patient-specific pedicle screw guides from CT scans.
 
-<img width="403" height="443" alt="Overview" src="https://github.com/user-attachments/assets/d9afc879-b3d8-4eb8-b6a7-ab7942d83758" />
+<img width="1438" height="1216" alt="image" src="https://github.com/user-attachments/assets/8659b3d2-2eda-459f-b4f8-921213995dcb" />
 
 *Figure 1: End-to-end framework of P2G: from CT to 3D-printable patient-specific pedicle screw guides.*
 
@@ -20,7 +20,7 @@ We use the publicly available [CTSpine1k](https://github.com/MIRACLE-Center/CTSp
 - **Entry Point**: A keypoint at the junction of transverse process and superior articular process.
 - **Contact Region**: A binary mask on the posterior arch (lamina, spinous process base, articular processes) ensuring stable guide placement.
 
-The raw point clouds are available in `data.zip`.
+The raw point clouds are available at [ScienceDB](https://cstr.cn/31253.11.sciencedb.30756).
 
 ---
 
