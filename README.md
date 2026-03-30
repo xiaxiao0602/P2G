@@ -2,7 +2,7 @@
 P2G (Point to Guide) is an end-to-end framework that integrates point-cloud deep learning with geometric optimization to automatically design 3D-printable patient-specific pedicle screw guides from CT scans.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/0453b188-e365-4004-905e-d02bbe168ad0" width="496" height="305" /><br>
+  <img src="https://github.com/user-attachments/assets/0453b188-e365-4004-905e-d02bbe168ad0" width="496" height="405" /><br>
   <em>Figure 1: End-to-end framework of P2G: from CT to 3D-printable patient-specific pedicle screw guides.</em>
 </p>
 
@@ -21,7 +21,7 @@ We use the publicly available [CTSpine1k](https://github.com/MIRACLE-Center/CTSp
 - **Entry Point**: A keypoint at the junction of transverse process and superior articular process.
 - **Contact Region**: A binary mask on the posterior arch (lamina, spinous process base, articular processes) ensuring stable guide placement.
 
-The raw point clouds are available at [ScienceDB](https://cstr.cn/31253.11.sciencedb.30756).
+The raw point clouds are available at [ScienceDB](https://cstr.cn/31253.11.sciencedb.30756).(DOI: https://doi.org/10.57760/sciencedb.30756)
 
 ---
 
@@ -34,9 +34,10 @@ The pipeline consists of four main stages:
 3. **Trajectory Optimization**: Candidate screw directions are sampled within a cone; the direction maximizing the minimum distance to cortical bone is selected.
 4. **Parametric Guide Generation**: Based on the predicted features and optimal trajectory, a 3D guide is automatically modeled (base, bridge, drill sleeves) and exported as STL.
 
-<img width="733" height="312" alt="image" src="https://github.com/user-attachments/assets/b4db49f3-1c6b-4441-8cd5-b1f0bb5081a4" />
-
-*Figure 2: Multi-task point cloud network architecture.*
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b4db49f3-1c6b-4441-8cd5-b1f0bb5081a4" width="733" height="312" /><br>
+  <em>Figure 2: Multi-task point cloud network architecture.</em>
+</p>
 
 For details, please refer to our paper.
 
