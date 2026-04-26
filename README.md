@@ -21,7 +21,7 @@ We use the publicly available [CTSpine1k](https://github.com/MIRACLE-Center/CTSp
 - **Entry Point**: A keypoint at the junction of transverse process and superior articular process.
 - **Contact Region**: A binary mask on the posterior arch (lamina, spinous process base, articular processes) ensuring stable guide placement.
 
-The raw point clouds are available at [ScienceDB](https://cstr.cn/31253.11.sciencedb.30756).(DOI: https://doi.org/10.57760/sciencedb.30756)
+The raw point-cloud data are publicly available via [ScienceDB](https://cstr.cn/31253.11.sciencedb.30756) under a CC BY 4.0 license.(DOI: https://doi.org/10.57760/sciencedb.30756)
 
 ---
 
